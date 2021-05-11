@@ -14,7 +14,7 @@ const Theme = {
   DARK: 'dark-theme',
 };
 
-const themeSwitcher = document.querySelector('.theme-switch__toggle');
+const themeSwitcher = document.querySelector('#theme-switch-toggle');
 themeSwitcher.addEventListener('change', onThemeSwitcherChange);
 const bodyEl = document.querySelector('body');
 
@@ -35,16 +35,16 @@ function onThemeSwitcherChange() {
       bodyEl.classList.remove(Theme.LIGHT);
     };
     bodyEl.classList.add(Theme.DARK);
-    localStorage.setItem('theme', bodyEl.classList);
     themeSwitcher.setAttribute('checked',true)
+    localStorage.setItem('theme', bodyEl.classList);
   }
   
   else {
     if (bodyEl.classList.contains(Theme.DARK)) {
       bodyEl.classList.remove(Theme.DARK);
     };
-    localStorage.setItem('theme', bodyEl.classList)
     bodyEl.classList.add(Theme.LIGHT);
+    localStorage.setItem('theme', bodyEl.classList)
   }
 };
 
