@@ -2435,7 +2435,7 @@ var Theme = {
   LIGHT: 'light-theme',
   DARK: 'dark-theme'
 };
-var themeSwitcher = document.querySelector('#theme-switch-toggle');
+var themeSwitcher = document.querySelector('.theme-switch__toggle');
 themeSwitcher.addEventListener('change', onThemeSwitcherChange);
 var bodyEl = document.querySelector('body');
 
@@ -2526,7 +2526,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49862" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "63075" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
