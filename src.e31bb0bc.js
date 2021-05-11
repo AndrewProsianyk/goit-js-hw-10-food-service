@@ -2435,7 +2435,7 @@ var Theme = {
   LIGHT: 'light-theme',
   DARK: 'dark-theme'
 };
-var themeSwitcher = document.querySelector('.theme-switch__toggle');
+var themeSwitcher = document.querySelector('#theme-switch-toggle');
 themeSwitcher.addEventListener('change', onThemeSwitcherChange);
 var bodyEl = document.querySelector('body');
 
@@ -2460,16 +2460,16 @@ function onThemeSwitcherChange() {
 
     ;
     bodyEl.classList.add(Theme.DARK);
-    localStorage.setItem('theme', bodyEl.classList);
     themeSwitcher.setAttribute('checked', true);
+    localStorage.setItem('theme', bodyEl.classList);
   } else {
     if (bodyEl.classList.contains(Theme.DARK)) {
       bodyEl.classList.remove(Theme.DARK);
     }
 
     ;
-    localStorage.setItem('theme', bodyEl.classList);
     bodyEl.classList.add(Theme.LIGHT);
+    localStorage.setItem('theme', bodyEl.classList);
   }
 }
 
@@ -2526,7 +2526,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "63075" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49824" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
