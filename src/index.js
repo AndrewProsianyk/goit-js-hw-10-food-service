@@ -14,13 +14,13 @@ const Theme = {
   DARK: 'dark-theme',
 };
 
-const themeSwitcher = document.querySelector('#theme-switch-toggle');
+const themeSwitcher = document.querySelector('.theme-switch__toggle');
 themeSwitcher.addEventListener('change', onThemeSwitcherChange);
 const bodyEl = document.querySelector('body');
 
 
 if (localStorage.getItem('theme') === null) {
-  localStorage.setItem('theme', Theme.LIGHT)
+  localStorage.setItem('theme', Theme.LIGHT);
 };
 
 bodyEl.classList = localStorage.getItem('theme');
